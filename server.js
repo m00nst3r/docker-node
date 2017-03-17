@@ -1,10 +1,9 @@
 'use strict';
-
+console.log(process.env);
 const express = require('express');
 
 // Constants
-const PORT = 8080;
-
+const PORT = process.env.FOO || 8080;
 const FOO = process.env.FOO || 'null';
 const BAR = process.env.BAR || 'null';
 
@@ -13,7 +12,7 @@ const app = express();
 app.get('/', function (req, res) {
   console.log(FOO);
   console.log(BAR);
-  res.send('Hello world\n');
+  res.send(`${FOO} and ${BAR}`);
 });
 
 app.listen(PORT);
