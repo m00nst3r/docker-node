@@ -50,3 +50,5 @@ jspm_packages
 
 
 .vscode
+build.gradle
+docker-run.yml
