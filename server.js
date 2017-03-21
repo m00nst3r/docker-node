@@ -1,5 +1,4 @@
 'use strict';
-console.log(process.env);
 const express = require('express');
 
 // Constants
@@ -10,8 +9,6 @@ const BAR = process.env.BAR || 'null';
 // App
 const app = express();
 app.get('/', function (req, res) {
-  console.log(FOO);
-  console.log(BAR);
   res.send(`${FOO} and ${BAR}`);
 });
 

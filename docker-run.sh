@@ -22,7 +22,7 @@ docker run -e FOO="hello world!" \
 -e BAR="AWESOME" \
 -e PORT=$PORT \
 --name $APP_NAME_ENV \
--p $PORT:8080 \
+-p $PORT:$PORT \
 -d $IMAGE_NAME
 
 echo "=============================="
