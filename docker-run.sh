@@ -14,6 +14,8 @@ echo ${ENV}
 export APP_NAME_ENV="${APP_NAME}-${ENV}"
 export IMAGE_NAME=${IMAGE_APP_NAME}:${VERSION}
 
+echo "Images ID's: " $(docker ps -a -q --filter="name=${APP_NAME_ENV}")
+
 echo "image name to use $IMAGE_NAME"
 
 docker rm -f ${APP_NAME_ENV}
