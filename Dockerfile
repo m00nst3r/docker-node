@@ -11,4 +11,6 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
+RUN adduser -D app && chown -R app /usr/src/app
+
 CMD [ "npm", "start" ]
