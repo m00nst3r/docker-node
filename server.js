@@ -1,6 +1,6 @@
 'use strict';
 const express = require('express');
-let state = {  
+let state = {
     generateFailure: false
 };
 
@@ -22,8 +22,8 @@ app.get('/guid', (req, res) => {
   res.json({"guid": uuid.v4(), "container": hostname})
 });
 
-app.post("/toggle.failure", (req, res) => {  
-    state.generateFailure = !state.generateFailure;  
+app.post("/toggle.failure", (req, res) => {
+    state.generateFailure = !state.generateFailure;
     res.status(200).end();
 });
 

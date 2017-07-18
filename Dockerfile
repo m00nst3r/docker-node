@@ -2,7 +2,7 @@ FROM node:boron-alpine
 
 # RUN apk --update add curl
 
-# HEALTHCHECK CMD curl --fail http://localhost:9000/guid/ || exit 1 
+# HEALTHCHECK CMD curl --fail http://localhost:9000/guid/ || exit 1
 
 # Create app directory
 RUN mkdir -p /usr/src/app
